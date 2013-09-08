@@ -1,5 +1,10 @@
-Tech Talk Tuesday - Cool C Programming (03-09-2013)
+Tech Talk Tuesday - Cool C Programming
 ===================================================
+
+Speaker: Sathyam M Vellal
+Date: 03-09-2013
+
+---
 
 ## The C Preprocessor
 
