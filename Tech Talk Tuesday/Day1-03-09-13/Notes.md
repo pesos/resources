@@ -1,8 +1,8 @@
 Tech Talk Tuesday - Cool C Programming
 ===================================================
 
-Speaker: Sathyam M Vellal
-Date: 03-09-2013
+**Speaker**: Sathyam M Vellal  
+**Date**: 03-09-2013
 
 ---
 
