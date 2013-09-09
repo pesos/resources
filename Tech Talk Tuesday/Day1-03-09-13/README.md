@@ -20,13 +20,13 @@ If you want to see the output of the preprocessor, you can use the ```-E``` flag
 
 There are three standard input/output buffers 
 
-* ```stdin`` The input buffer
+* ```stdin``` The input buffer
 * ```stdout``` The default output buffer
 * ```stderr``` The output buffer for error/log messages
 
 ### Conditional Syntax - ```#ifdef``` and ```#ifndef```
 
-The preprocessor directive #ifdef is used to define conditional groups of code at the preprocessor level. Based on a condition, a piece of code may or may not be included in the program. The body of this directive is usually termed *controlled text*
+The preprocessor directive ```#ifdef``` is used to define conditional groups of code at the preprocessor level. Based on a condition, a piece of code may or may not be included in the program. The body of this directive is usually termed *controlled text*
 
 ```c
 #ifdef SOME_MACRO
@@ -75,7 +75,7 @@ int main()
 ```
 ###### Fig(1.2)
 
-Let me now define the MACRO ```#ifdef``` is using.
+Let me now define the MACRO ```#ifdef``` using ```#define```.
 
 ```c
 #define SOME_MACRO
@@ -197,7 +197,7 @@ int main ()
 ###### Fig(1.7)
 
 Let this be a file, *debug.c* .
-What is this program trying to do? This program calls the function ```foo()``` with 2 arguments, ```x```, ```y```. ```foo()``` and foo wants perform the operation ```(x + y) / (x - y)```. It also uses a function-like MACRO ```CHECK``` which expands to an assert statement (forget about the ```do {...} while(0)``` for now). ```assert``` is a library function declared in ```assert.h``` which aborts the program if the given assertion fails (in this example ```(x - y) != 0```). 
+What is this program trying to do? This program calls the function ```foo()``` with 2 arguments, ```x``` and ```y```.; and foo wants perform the operation ```(x + y) / (x - y)```. It also uses a function-like MACRO ```CHECK``` which expands to an assert statement (forget about the ```do {...} while(0)``` for now). ```assert``` is a library function declared in ```assert.h``` which aborts the program if the given assertion fails (in this example ```(x - y) != 0```). 
 
 According to our expectations, The program and must execute the first ```foo(4, 3)``` call and should fail when trying execute the second ```foo(4, 4)``` call because of division by zero (Forget about the ```__LINE__``` in the printf). Now let me compile it without defining the ```CHECK_ENABLED``` MACRO. Compile with ```gcc debug.c``` and run ```./a.out```; the following is the output.
 
